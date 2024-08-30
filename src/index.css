@@ -1,0 +1,82 @@
+:root {
+  font-family: "Poppins", sans-serif;
+
+  --primary-red: #ef4444;
+  --secondary-red: #dc2626;
+  --primary-green: #22c55e;
+  --secondary-green: #16a34a;
+  --primary-blue: #0ea5e9;
+  --secondary-blue: #0c87b8;
+  --text-color: #f3f4f6;
+  --primary-dark: #0a0a0a;
+  --secondary-dark: #171717;
+  --primary-gray: #4b5563;
+  --secondary-gray: #9ca3af;
+  --third-gray: #696969;
+  --modal-background: #09090b;
+  --rounded-md: 0.375rem;
+  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  margin: 0;
+  padding: 0;
+  /* Light Gray */
+}
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: theme("borderColor.DEFAULT", currentColor);
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-dark),
+    var(--secondary-dark)
+  );
+  min-height: 100vh;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
