@@ -147,6 +147,7 @@ const EditForm = ({ setshowForm, music }) => {
           placeholder="Enter genre"
         />
 
+        <Label htmlFor="length">Length:</Label>
         <Input
           value={formData.length}
           onChange={handleChange}
