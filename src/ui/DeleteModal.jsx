@@ -4,8 +4,9 @@ import { useDispatch } from "react-redux";
 const DeleteWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
+  max-width: 200px;
   border-radius: 8px;
+  gap: 0.5rem;
 `;
 
 const DeleteButton = styled.button`
@@ -42,6 +43,7 @@ const StyledHeader = styled.h1`
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  max-width: 200px;
 `;
 
 const DeleteModal = ({ id, setshowForm }) => {
