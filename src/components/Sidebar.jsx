@@ -9,6 +9,10 @@ const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+
+  @media (max-width: 768px) {
+    display: none; /* Hide sidebar on small screens */
+  }
 `;
 //  // border-right: 0.5px solid var(--secondary-gray);
 
