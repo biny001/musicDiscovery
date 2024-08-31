@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Modal from "../components/Modal";
 import AddForm from "../ui/AddForm";
 import { useDispatch, useSelector } from "react-redux";
+import Spinner from "../ui/Spinner";
 
 const GridContainer = styled.div`
   display: grid;
@@ -50,11 +51,15 @@ const Home = () => {
         )}
       </Row>
 
-      <GridContainer>
-        {musicList?.map((music, index) => (
-          <Card key={index} music={music} />
-        ))}
-      </GridContainer>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <GridContainer>
+          {musicList?.map((music, index) => (
+            <Card key={index} music={music} />
+          ))}
+        </GridContainer>
+      )}
     </>
   );
 };

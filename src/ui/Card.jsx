@@ -4,6 +4,7 @@ import { FaPlay, FaEdit, FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import EditForm from "./EditForm";
 import Modal from "../components/Modal";
+import DeleteModal from "./DeleteModal";
 
 const PlayButton = styled.div`
   position: absolute;
@@ -104,7 +105,7 @@ const DeleteButton = styled.button`
 const Card = ({ music }) => {
   const { title, id, length, description, genre, artist, image } = music;
   const [showForm, setshowForm] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [showDeletModal, setDeletModal] = useState(false);
   const dispatch = useDispatch();
   return (
     <StyledCard>
@@ -121,14 +122,7 @@ const Card = ({ music }) => {
           <EditButton onClick={() => setshowForm(true)}>
             <FaEdit />
           </EditButton>
-          <DeleteButton
-            onClick={() =>
-              dispatch({
-                type: "music/deleteMusicList",
-                payload: music?.id,
-              })
-            }
-          >
+          <DeleteButton onClick={() => setDeletModal(true)}>
             <FaTrash />
           </DeleteButton>
         </IconContainer>
@@ -138,8 +132,20 @@ const Card = ({ music }) => {
           <EditForm music={music} setshowForm={setshowForm} />
         </Modal>
       )}
+      {showDeletModal && (
+        <Modal setshowForm={setDeletModal}>
+          <DeleteModal id={music?.id} setshowForm={setDeletModal} />
+        </Modal>
+      )}
     </StyledCard>
   );
 };
 
 export default Card;
+
+// onClick={() =>
+//   dispatch({
+//     type: "music/deleteMusicList",
+//     payload: music?.id,
+//   })
+// }
