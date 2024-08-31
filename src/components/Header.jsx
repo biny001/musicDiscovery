@@ -7,7 +7,7 @@ import Logo from "./Logo";
 // import { selectCurrentArtist, selectCurrentMusic } from "../Selectors/selector";
 
 const StyledHeader = styled.header`
-  background-color: #171717;
+  background-color: var(--primary-dark);
   padding: 1.2rem 4.8rem;
   @media (max-width: 768px) {
     background-color: var(--primary-dark);

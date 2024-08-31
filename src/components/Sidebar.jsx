@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import Logo from "./Logo";
 
 const StyledSidebar = styled.aside`
-  background-color: #171717;
-  padding: 3.2rem 2.4rem;
+  background-color: var(--primary-dark);
+  padding: 2rem 2.4rem;
 
   grid-row: 1 / -1;
   display: flex;
