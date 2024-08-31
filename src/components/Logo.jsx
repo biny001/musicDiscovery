@@ -8,7 +8,7 @@ const StyledLogo = styled.div`
 `;
 
 const Img = styled.img`
-  height: 9.6rem;
+  height: 3.5rem;
   width: auto;
 
   @media (max-width: 768px) {
